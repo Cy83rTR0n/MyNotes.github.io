@@ -1,0 +1,700 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Paper - 1</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="15ce73bd-03a8-4ebd-ba69-cbf6558a3b78" class="page sans"><header><h1 class="page-title">Paper - 1</h1></header><div class="page-body"><h2 id="68c55319-3ff9-4fd7-97bc-ca7805ce2b44" class="">Topic - WhisperGate</h2><h3 id="0cee570b-1c14-46a6-ba59-2ac5f561e8b8" class="">Data Wiper Malware:</h3><p id="c319883a-faf8-4799-b4a8-69f8df8cf659" class="">There are 3 main goals of a data wiper malware:</p><ol type="1" id="4960ded7-7589-4d71-a2eb-cd04d875b8a7" class="numbered-list" start="1"><li><strong>Overwrite Master Boot Record (MBR) and exhibit a fake ransom note after system reboot.</strong></li></ol><ol type="1" id="74f7a6e9-114f-434b-ba11-9c4e95624e9a" class="numbered-list" start="2"><li><strong>Download stage 3 from a Discord server</strong></li></ol><ol type="1" id="90d4c4c5-6dca-4ae3-bc97-a38f9c6c0e60" class="numbered-list" start="3"><li><strong>Stop and disable Windows Defender</strong></li></ol><ol type="1" id="26d2fdf6-ceb1-4e67-a00c-e6818bcf4b23" class="numbered-list" start="4"><li><strong>Encrypt/damage files, ping an address and remove the malware itself from the machine</strong></li></ol><h2 id="4ada6e4c-e276-4193-bd4e-584df0dcd101" class="">Stage 1:</h2><ol type="1" id="1c8a37bd-ce8f-488c-83cc-7386f5b2c77a" class="numbered-list" start="1"><li>CreateFileW<pre id="e0d91e1a-b251-4bd8-a1d5-83e27de99919" class="code"><code>HANDLE CreateFileW(
+[in]           LPCWSTR               lpFileName,
+[in]           DWORD                 dwDesiredAccess,
+[in]           DWORD                 dwShareMode,
+[in, optional] LPSECURITY_ATTRIBUTES lpSecurityAttributes,
+[in]           DWORD                 dwCreationDisposition,
+[in]           DWORD                 dwFlagsAndAttributes,
+[in, optional] HANDLE                hTemplateFile
+);</code></pre></li></ol><ol type="1" id="f19ff0ac-ca79-4519-8655-949d93a6a962" class="numbered-list" start="2"><li>WriteFile<pre id="d8692974-ea3b-4fd0-8a38-6c0b7d9f2581" class="code"><code>BOOL WriteFile(
+[in]                HANDLE       hFile,
+[in]                LPCVOID      lpBuffer,
+[in]                DWORD        nNumberOfBytesToWrite,
+[out, optional]     LPDWORD      lpNumberOfBytesWritten,
+[in, out, optional] LPOVERLAPPED lpOverlapped
+);</code></pre><blockquote id="a14e1853-227f-49a9-a157-d2648c7302e1" class="">A HANDLE in Win32 programming is <strong>a token that represents a resource that is managed by the Windows kernel</strong>
+. A handle can be to a window, a file, etc. Handles are simply a way of identifying a particulate resource that you want to work with using the Win32 APIs.</blockquote></li></ol><p id="204100e7-d041-4809-99d2-e6f0e24bc768" class="">As discussed above this malware tries to corrupt the MBR and overwrites it with the ransom message. After a thorough lookup, I have come to know that MBR is responsible for identifying how and where the system&#x27;s operating system is located in order to be booted (loaded) into the computer&#x27;s main storage or random access memory. It’s size is 512 bytes(imp)</p><p id="c8d0ee85-fabc-4999-99ff-9063ee0f0fcc" class="">Snapshot of stage - 1</p><figure id="631677d3-1a2c-4e92-be71-79c1d35c37cd" class="image"><a href="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled.png"><img style="width:1553px" src="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled.png"/></a><figcaption>MBR(overwrite)</figcaption></figure><p id="3fb49157-fd86-4792-a42e-1f4f65f4888a" class="">as we can see 0x200 = 512, hence exactly the size of the MBR(well Ghidra gives the better thing about 0x200 and 0x2000u). It loads the Ransom text from a buffer.</p><p id="4d46bed2-a2d9-4b6f-b3f3-807cedf415f1" class="">The second argument in CreateFileW API is regarding the desired access mode. 0x100000 stands for PERM_ALL(not clear)(feel that it gives all the access).</p><p id="8690a5df-3fbf-4555-981b-dd5289187579" class="">Then we write to the file using the second API. </p><figure id="793fe890-8255-4696-9ada-805a71d81baa" class="image"><a href="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%201.png"><img style="width:672px" src="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%201.png"/></a><figcaption>Writes ransom note on the display</figcaption></figure><p id="bb7742f7-0eaf-4305-9b6f-39dd3714c952" class="">some important facts about this ss is that, after the malware gets access to the MBR, it passes 14 to the ah variable. Which basically works as the printf in C, since MBR is a very native platform we dont have access to high level commands.</p><p id="082a9357-4f93-4c2c-ac9d-a2167f295256" class="">Just to make things more interesting we can try to run things in a VM. After running it is found that </p><p id="562b736b-f3b7-434f-b71d-042cce37ddc9" class="">the MBR is wiped away and when we restart we are shown the message. 
+Now while this message is been displayed all the other drives one by one are corrupted with random bytes of data.
+Along this Stage 2 also keeps on running.</p><h2 id="a361dd69-a73b-457c-abd6-01020883e24e" class="">Stage 2</h2><p id="4c6a4c30-0dd1-44a4-a119-cf4bf1b8c26a" class="">Stage 2 is basically written in C# and it tries to download jpg(“<strong>Tbopbh.jpg</strong>”) which in turn becomes PE. </p><p id="7613ad12-f51d-4025-a597-d23dab2e2770" class="">After analyzing we find it that is written in reverse order.</p><figure id="c61eee11-9f2c-4271-b2d3-89d0d4a1edde" class="image"><a href="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%202.png"><img style="width:938px" src="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%202.png"/></a></figure><p id="9a055d49-c251-4ff4-9f69-9d81fa55c806" class="">Upon reversing the order of the bytes in the file, we found a .NET assembly DLL file named <em>Frkmlkdkdubkznbkmcf.dll, </em>which contains two resources. After the download, the malware loads the binary as a .NET assembly and executes the method named “<strong>Ylfwdwgmpilzyaph</strong>”.</p><figure id="4f174c66-95b2-4055-ba00-2447617e4bf2" class="image"><a href="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%203.png"><img style="width:648px" src="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%203.png"/></a></figure><h2 id="2969288e-4305-4a23-8bb6-beb7ea5b47fd" class="">Stage 3</h2><figure id="5aef995a-fdba-491b-aaa6-299ac3472232" class="image"><a href="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%204.png"><img style="width:1099px" src="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%204.png"/></a></figure><p id="c3ca651b-226d-4ae6-a076-89ee99b40fba" class="">As shown in the image above, the file is protected with Eazfuscator, likely to hinder researchers’ analysis. Searching throughout the decompiled code, we can find the same method that is executed by the second stage.</p><p id="055fb384-ee31-42dd-89dc-edabf41a812d" class="">Once running this code the malware checks whether the user is admin or not, otherwise it relaunches itself with elevated permissions and exits itself.</p><p id="5d038504-dff5-4333-9d3c-8bcfbc881741" class="">After little research what I understand is in this stage we run a command to add “C:\” drive to windows defender exclusion list. Further this stage adds <strong>AdvancedRun.exe</strong></p><p id="0bf35c35-a871-42eb-a65f-b9af57ab9bd5" class="">It executes two commands with this tool, both as an attempt to disable Windows Defender. The first one tries to stop Defender’s service, and the second tries to delete its respective folder.</p><figure id="8262109e-3103-4244-af95-383286c93b1c" class="image"><a href="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%205.png"><img style="width:1058px" src="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%205.png"/></a></figure><figure id="462f8951-9fcf-4555-9484-e3b6fcf7db88" class="image"><a href="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%206.png"><img style="width:955px" src="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%206.png"/></a></figure><p id="23e91c51-a482-4fb9-ae6e-41ecc2223b87" class="">The malware further tries to move InstallUtil.exe into the temp folder.</p><p id="c96fc4a5-98fa-4c0e-951e-de0f5d9cebcc" class="">And finally, WhisperGate’s last stage is injected into an instance of the InstallUtil’s process. The payload is stored within an encrypted resource, where all the bytes are reversed and compressed with Gzip.</p><h2 id="3439cf65-16fb-4efd-8fea-c3935122cfb4" class="">Stage 4</h2><p id="ec992854-7d23-4590-90a1-0b758b57c01d" class="">Final nail in the coffin is given done in this stage. </p><p id="46cdb972-8c86-4f0c-9c19-f43652ec6fc6" class="">This stage searches for around 120 different file types and appends them with random 4 chars.</p><p id="2c64616d-f075-49fa-b228-93c8d2c708cf" class="">How it does is interesting.</p><p id="9c4a4edf-ac84-4390-bbb5-4d9df0d14b43" class="">There are 2 main functions.</p><figure id="3abb6e0e-e669-47d8-ac30-cc2f18d5c404" class="image"><a href="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%207.png"><img style="width:466px" src="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%207.png"/></a></figure><p id="0c393162-ae7d-4fc0-9ba4-bf868d18ba37" class="">the first one does the following.</p><figure id="1c812a27-9a4a-4c93-9ed5-5572af354c8b" class="image"><a href="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%208.png"><img style="width:372px" src="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%208.png"/></a></figure><pre id="898d5192-c61b-43ce-8dfb-440a301b233d" class="code"><code>DWORD GetLogicalDrives();</code></pre><h2 id="012de79d-c1b4-41e6-8a55-1e1ebf79a056" class=""><strong>Return value</strong></h2><p id="80bba324-8361-4098-8481-32324bc0d66a" class="">If the function succeeds, the return value is a bitmask representing the currently available disk drives. Bit position 0 (the least-significant bit) is drive A, bit position 1 is drive B, bit position 2 is drive C, and so on.</p><p id="82cdb313-7a12-4c4f-84d9-47054b516edd" class="">If the function fails, the return value is zero. To get extended error information, call <a href="https://docs.microsoft.com/en-us/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror">GetLastError</a>.</p><figure id="67468cf0-dd1a-4429-9217-97ebe324f6a9" class="image"><a href="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%209.png"><img style="width:637px" src="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%209.png"/></a></figure><pre id="fc5c91cf-5ff4-49ab-826f-3d5f81e6a0cb" class="code"><code>UINT GetDriveTypeW(
+  [in, optional] LPCWSTR lpRootPathName
+);
+</code></pre><figure id="52a55bfc-fa27-49c3-94c4-c3dd9100b263" class="image"><a href="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%2010.png"><img style="width:933px" src="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%2010.png"/></a></figure><p id="dd917028-0a84-4ce5-9eb5-9d05b5d6f6a7" class="">After checking about the type of drive.</p><p id="df9dbf31-18fb-4753-b0f8-a55a4a118912" class="">The mw_wipe_files does the following</p><figure id="184c9b87-ec6a-4696-9bf6-2212116ab729" class="image"><a href="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%2011.png"><img style="width:625px" src="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%2011.png"/></a></figure><pre id="eb9f1830-c301-49b3-a1a4-d3440c923009" class="code"><code>HANDLE FindFirstFileW(
+[in]  LPCWSTR            lpFileName,
+[out] LPWIN32_FIND_DATAW lpFindFileData
+);</code></pre><h2 id="ab5c01bb-07e2-4798-aee9-747efe097f6b" class=""><strong>Return value</strong></h2><p id="22658b4b-b139-4af0-84c3-7744d0018518" class="">If the function succeeds, the return value is a search handle used in a subsequent call to <a href="https://docs.microsoft.com/en-us/windows/desktop/api/fileapi/nf-fileapi-findnextfilew">FindNextFile</a> or <a href="https://docs.microsoft.com/en-us/windows/desktop/api/fileapi/nf-fileapi-findclose">FindClose</a>, and the <em>lpFindFileData</em> parameter contains information about the first file or directory found.</p><p id="a0e16340-811f-4a68-aafe-e01de4021fc2" class="">If the function fails or fails to locate files from the search string in the <em>lpFileName</em> parameter, the return value is <strong>INVALID_HANDLE_VALUE</strong> and the contents of <em>lpFindFileData</em> are indeterminate. To get extended error information, call the <a href="https://docs.microsoft.com/en-us/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror">GetLastError</a> function.</p><p id="aa191ad4-7ea0-4629-8253-50d8c13218b8" class="">If the function fails because no matching files can be found, the <a href="https://docs.microsoft.com/en-us/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror">GetLastError</a> function returns <strong>ERROR_FILE_NOT_FOUND</strong>.</p><p id="def0fe20-594a-48c4-86f9-f7430cc325bb" class="">If the current object is a directory, the “<strong>mw_wipe_files</strong>” function is called recursively with the identified directory as a parameter. This is verified by calling the “<strong>_wstat</strong>” function and checking the st_mode bits.</p><p id="d3ae7fab-8bfb-484c-9606-54db777d5bab" class="">The last verification is related to the file’s extension, where the malware iterates over a list of targeted extensions and, if the file name matches, a function we named “<strong>mw_write_bytes_to_file”</strong>
+ is called.</p><figure id="92ac423e-5317-48a5-add7-b8e6bb7e76b5" class="image"><a href="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%2012.png"><img style="width:357px" src="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%2012.png"/></a></figure><p id="2860235c-0154-4e01-a348-b9bfefa1ee36" class="">WhisperGate targets many files with extensions related to websites, such as “.html”, “.php”, “.asp”, “.jsp”, as well as common documents like “.doc”, “.xls”, “.ppt”, etc.</p><p id="d0ba8e61-f8d3-4516-90ff-c8bd8a54118d" class="">Once it’s over, WhisperGate deletes itself through a simple command line, where “%s” is the file path obtained with GetModuleA.</p><pre id="1edcb3ac-b3d0-4dee-b9a8-ec619d743133" class="code"><code>DWORD GetModuleFileNameA(
+  [in, optional] HMODULE hModule,
+  [out]          LPSTR   lpFilename,
+  [in]           DWORD   nSize
+);</code></pre><h2 id="94c6951b-c4b6-41f6-a0bc-312b1b1d5b01" class=""><strong>Return value</strong></h2><p id="4998a9b2-96a2-4e80-a478-5e1c91d8e554" class="">If the function succeeds, the return value is the length of the string that is copied to the buffer, in characters, not including the terminating null character. If the buffer is too small to hold the module name, the string is truncated to <em>nSize</em> characters including the terminating null character, the function returns <em>nSize</em>, and the function sets the last error to <strong>ERROR_INSUFFICIENT_BUFFER</strong>.</p><p id="c8e3d52c-a3da-4098-9c22-53d613e26b96" class=""><strong>Windows XP:  </strong>If the buffer is too small to hold the module name, the function returns <em>nSize</em>. The last error code remains <strong>ERROR_SUCCESS</strong>. If <em>nSize</em> is zero, the return value is zero and the last error code is <strong>ERROR_SUCCESS</strong>.</p><p id="70ff6eca-fb28-4fc6-b865-d64a63864e46" class="">If the function fails, the return value is 0 (zero). To get extended error information, call GetLastError.</p><figure id="04c26cab-07d1-49cf-b916-3234d03cc082" class="image"><a href="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%2013.png"><img style="width:908px" src="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%2013.png"/></a></figure><figure id="029aa2be-fbac-4d85-939c-3192acd8f4d9" class="image"><a href="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%2014.png"><img style="width:872px" src="Paper%20-%201%20631677d31a2c4e92be7179c1d35c37cd/Untitled%2014.png"/></a></figure><p id="0d14f260-c0b6-4020-9c06-a181a17ac7ae" class="">
+</p><p id="ed8b0213-2b99-40cb-8e20-e254d57d4860" class="">
+</p><h3 id="7a774331-99eb-4819-ba80-de49b20c8ca4" class="">Bibliography:</h3><ul id="05fc3976-eaca-41bf-ac58-7f020d791a37" class="bulleted-list"><li style="list-style-type:disc"><a href="https://en.wikipedia.org/wiki/Wiper_(malware)">https://en.wikipedia.org/wiki/Wiper_(malware)</a> (more info about wiper malware)</li></ul><ul id="d5683428-537f-489e-bf83-93a223ae6f39" class="bulleted-list"><li style="list-style-type:disc"><a href="https://resources.infosecinstitute.com/topic/whispergate-a-destructive-malware-to-destroy-ukraine-computer-systems/">https://resources.infosecinstitute.com/topic/whispergate-a-destructive-malware-to-destroy-ukraine-computer-systems/</a></li></ul><ul id="c68b77c5-8e44-4148-abc7-b0b2e72722ca" class="bulleted-list"><li style="list-style-type:disc"><a href="https://medium.com/s2wblog/analysis-of-destructive-malware-whispergate-targeting-ukraine-9d5d158f19f3">https://medium.com/s2wblog/analysis-of-destructive-malware-whispergate-targeting-ukraine-9d5d158f19f3</a></li></ul><ul id="7618133d-87e0-4991-a01c-fec03eda17e0" class="bulleted-list"><li style="list-style-type:disc"><a href="https://blog.cyble.com/2022/02/01/whispergate-malware-deep-dive-analysis/">https://blog.cyble.com/2022/02/01/whispergate-malware-deep-dive-analysis/</a></li></ul><ul id="047c1e20-e011-4bbc-8a80-0fdea064654f" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.netskope.com/blog/netskope-threat-coverage-whispergate">https://www.netskope.com/blog/netskope-threat-coverage-whispergate</a></li></ul><ul id="fac9c799-7739-4a84-a12b-a4d86a682563" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.techtarget.com/whatis/definition/Master-Boot-Record-MBR">https://www.techtarget.com/whatis/definition/Master-Boot-Record-MBR</a>(to understand MBR)</li></ul><ul id="fd8b3d98-c7e2-45ca-9252-7e04066585fe" class="bulleted-list"><li style="list-style-type:disc"><a href="https://docs.microsoft.com/en-in/">https://docs.microsoft.com/en-in/</a></li></ul><ul id="b2f315c7-ada1-4b80-9193-2ae57052877b" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.microsoft.com/security/blog/2022/01/15/destructive-malware-targeting-ukrainian-organizations/">https://www.microsoft.com/security/blog/2022/01/15/destructive-malware-targeting-ukrainian-organizations/</a></li></ul><ul id="00b6110a-e4f6-4f96-b0b6-dc17253489a1" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.ntfs.com/guid-part-table.htm">https://www.ntfs.com/guid-part-table.htm</a> (to understand what is GUID)</li></ul><ul id="694717ce-b515-4472-b43b-735760c20197" class="bulleted-list"><li style="list-style-type:disc">Youtube - 1</li></ul><figure id="ebc47332-33cb-497d-bed6-c8a827089a48"><div class="source"><a href="https://www.youtube.com/watch?v=Ek3URIaC5O8">https://www.youtube.com/watch?v=Ek3URIaC5O8</a></div></figure><ul id="22c16e97-b170-43f8-a3ff-c40f2167c129" class="bulleted-list"><li style="list-style-type:disc">Youtube - 2 (only the first part)</li></ul><figure id="0d5432bd-f8fd-448b-8e19-200f16cddbde"><div class="source"><a href="https://www.youtube.com/watch?v=XxN4cINiLqA">https://www.youtube.com/watch?v=XxN4cINiLqA</a></div></figure><p id="70c53be1-992e-4c3b-bc12-484a62ea2a27" class="">
+</p><figure id="078d6272-fc2e-4691-afde-6a69012abfed" class="link-to-page"><a href="https://www.notion.so/Paper-2-078d6272fc2e4691afde6a69012abfed">Paper - 2</a></figure></div></article></body></html>
